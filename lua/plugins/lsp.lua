@@ -1,11 +1,11 @@
 return {
   {
     "folke/noice.nvim",
-    enabled = false,
+    enabled = true,
   },
   {
     "ray-x/navigator.lua",
-    enabled = true,
+    enabled = false,
     dependencies = {
       { "ray-x/guihua.lua", run = "cd lua/fzy && make" },
       { "neovim/nvim-lspconfig" },
