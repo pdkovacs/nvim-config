@@ -1,5 +1,12 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
+    opts = function(_, opts)
+      opts.autoformat = false
+    end,
+  },
+  {
     "folke/noice.nvim",
     enabled = true,
   },
