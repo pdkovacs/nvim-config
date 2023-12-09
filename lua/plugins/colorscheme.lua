@@ -6,12 +6,18 @@ return {
   { "catppuccin/nvim" },
   { "sainnhe/edge" },
   { "tanvirtin/monokai.nvim" },
+  { "rktjmp/lush.nvim" }, -- Not a colorscheme, gives realtime feedback on colorschemes; required by zenbones
+  { "mcchrish/zenbones.nvim" },
+  { "EdenEast/nightfox.nvim" },
   -- Configure LazyVim to load <colorscheme>
   {
     "LazyVim/LazyVim",
     opts = {
       --      colorscheme = "monokai",
-      colorscheme = "lunaperche",
+      install = {
+        missing = true,
+        colorscheme = "nightfox",
+      },
     },
   },
 }
