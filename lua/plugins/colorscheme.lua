@@ -27,10 +27,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       --      colorscheme = "monokai",
-      install = {
-        missing = true,
-        colorscheme = "nightfox",
-      },
+      colorscheme = "nightfox",
     },
   },
 }
