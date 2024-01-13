@@ -9,6 +9,13 @@ return {
   {
     "folke/noice.nvim",
     enabled = true,
+    config = {
+      lsp = {
+        hover = {
+          enabled = false,
+        },
+      },
+    },
   },
   {
     "neovim/nvim-lspconfig",
