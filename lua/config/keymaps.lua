@@ -3,8 +3,19 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "gh", " <Nop>", { desc = "Calling hiearchy" })
+
 vim.keymap.set("n", "ghi", vim.lsp.buf.incoming_calls, { desc = "Incoming calls" })
+
+vim.keymap.set("n", "<leader>qr", function()
+  require("utils.session").restore_session()
+end, { desc = "Restore Session" })
+
+vim.keymap.set("n", "<leader>qs", function()
+  require("utils.session").save_session()
+end, { desc = "Save Session" })
+
 vim.keymap.set("n", "<leader>v", " <Nop>", { desc = "Preview document" })
+
 vim.keymap.set("n", "<leader>vm", function()
   vim.cmd("MarkdownPreviewToggle")
 end, { desc = "Toggle markdown preview " })
