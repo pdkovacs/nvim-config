@@ -29,7 +29,8 @@ return {
     opts = {
       -- colorscheme = "monokai",
       -- colorscheme = "nightfox",
-      colorscheme = "github_light_default",
+      -- colorscheme = "github_light_default",
+      colorscheme = "dracula",
     },
   },
 }
