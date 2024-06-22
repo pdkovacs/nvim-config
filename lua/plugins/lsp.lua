@@ -48,4 +48,13 @@ return {
       require("hierarchy-tree-go").setup()
     end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "hcl",
+        "terraform",
+      },
+    },
+  },
 }
