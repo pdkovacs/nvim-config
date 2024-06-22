@@ -10,6 +10,7 @@ return {
   { "mcchrish/zenbones.nvim" },
   { "EdenEast/nightfox.nvim" },
   { "Mofiqul/dracula.nvim" },
+  { "projekt0n/github-nvim-theme" },
   -- {
   --   "maxmx03/dracula.nvim",
   --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -27,7 +28,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       --      colorscheme = "monokai",
-      colorscheme = "nightfox",
+      colorscheme = "github_light_default",
     },
   },
 }
