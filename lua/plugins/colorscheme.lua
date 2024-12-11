@@ -27,8 +27,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      --      colorscheme = "monokai",
-      colorscheme = "github_light_default",
+      colorscheme = "monokai_ristretto",
+      --      colorscheme = "github_light_default",
     },
   },
 }
