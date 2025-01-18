@@ -7,10 +7,6 @@ return {
   --    end,
   --  },
   {
-    "folke/noice.nvim",
-    enabled = true,
-  },
-  {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = {
@@ -32,27 +28,6 @@ return {
     },
   },
   {
-    "ray-x/navigator.lua",
-    enabled = false,
-    dependencies = {
-      { "ray-x/guihua.lua", run = "cd lua/fzy && make" },
-      { "neovim/nvim-lspconfig" },
-    },
-    config = function()
-      require("navigator").setup()
-    end,
-  },
-  {
-    "crusj/hierarchy-tree-go.nvim",
-    enabled = false,
-    dependencies = {
-      { "neovim/nvim-lspconfig" },
-    },
-    config = function()
-      require("hierarchy-tree-go").setup()
-    end,
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
@@ -60,5 +35,43 @@ return {
         "terraform",
       },
     },
+  },
+  {
+    "hedyhli/outline.nvim",
+    lazy = true,
+    cmd = { "Outline", "OutlineOpen" },
+    keys = { -- Example mapping to toggle outline
+      { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
+    },
+    opts = {
+      -- Your setup opts here
+    },
+  },
+  {
+    "ldelossa/litee.nvim",
+    event = "VeryLazy",
+    opts = {
+      notify = { enabled = false },
+      panel = {
+        orientation = "bottom",
+        panel_size = 10,
+      },
+    },
+    config = function(_, opts)
+      require("litee.lib").setup(opts)
+    end,
+  },
+
+  {
+    "ldelossa/litee-calltree.nvim",
+    dependencies = "ldelossa/litee.nvim",
+    event = "VeryLazy",
+    opts = {
+      on_open = "panel",
+      map_resize_keys = false,
+    },
+    config = function(_, opts)
+      require("litee.calltree").setup(opts)
+    end,
   },
 }
