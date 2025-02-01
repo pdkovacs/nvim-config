@@ -12,7 +12,7 @@ return {
   { "Mofiqul/dracula.nvim" },
   { "projekt0n/github-nvim-theme" },
   -- {
-  --   "maxmx03/dracula.nvim",
+
   --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
   --   priority = 1000, -- make sure to load this before all the other start plugins
   --   config = function()
@@ -28,7 +28,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "monokai_ristretto",
-      --      colorscheme = "github_light_default",
+      --      colorscheme = "dayfox",
     },
   },
 }
